@@ -1,0 +1,124 @@
+/* FONT SIZES */
+/* 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* SPACING */
+/* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 37.5rem;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.01);
+  margin: 2rem;
+}
+
+.image {
+  background-image: url('image-product-desktop.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.info {
+  background-color: hsl(0, 0%, 100%);
+  padding: 2.4rem;
+}
+
+.heading-secondary {
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.heading-primary {
+  color: hsl(212, 21%, 14%);
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.info-text {
+  color: hsl(228, 12%, 48%);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-family: 'Fraunces', serif;
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+}
+
+.price-outdated {
+  font-size: 0.75rem;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: hsl(158, 36%, 37%);
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  font-size: 0.8rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: hsl(156, 39%, 19%);
+}
+
+@media (max-width: 40em) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    background-image: url('image-product-mobile.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 70%;
+  }
+}
